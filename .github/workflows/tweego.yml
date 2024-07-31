@@ -32,3 +32,9 @@ jobs:
         tweego -o example_1.html FreeUse.twee
         ls -l  # List files to verify the output
         # Add any additional commands to move or handle the HTML file as needed
+
+    - name: Upload HTML file
+      uses: actions/upload-artifact@v3
+      with:
+        name: html-files
+        path: example_1.html
