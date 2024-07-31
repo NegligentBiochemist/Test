@@ -9,7 +9,7 @@
 :: StoryTitle
 FreeUse
 
-:: Start
+:: Intro
 <<textbox "$name" "Paul">>
 
 This was it. Today's the day. The day you only ever dreamt about. It would never be a reality.
