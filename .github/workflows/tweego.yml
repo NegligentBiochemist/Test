@@ -33,7 +33,7 @@ jobs:
       run: |
         # Ensure the directory for HTML files is clean
         mkdir -p output
-        tweego -o output/example_1.html FreeUse.twee
+        tweego -o output/index.html FreeUse.twee
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
