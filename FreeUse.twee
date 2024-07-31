@@ -1,5 +1,6 @@
 :: StoryData
 {
+    "ifid": "8699C0E0-4850-4F85-9D26-D1C7284C7D3D",
     "start": "Intro",
     "StoryTitle": "FreeUse",
     "format": "SugarCube",
