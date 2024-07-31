@@ -1,17 +1,19 @@
-name: Convert Twee to HTML
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Set the branch you want to monitor
+      - main  # Set this to the branch you want to trigger the deployment from
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Ensure the full history is fetched for the gh-pages branch
 
     - name: Set up Go
       uses: actions/setup-go@v3
@@ -22,28 +24,24 @@ jobs:
       run: |
         git clone https://github.com/tmedwards/tweego.git
         cd tweego
-        go mod tidy          # Download dependencies and update go.sum
+        go mod tidy
         go install
         go build
-        cp tweego /usr/local/bin/tweego  # Make sure tweego is in PATH
+        cp tweego /usr/local/bin/tweego
 
     - name: Convert Twee to HTML
       run: |
-        tweego -o example_1.html FreeUse.twee
-        ls -l  # List files to verify the output
-        # Add any additional commands to move or handle the HTML file as needed
-
-    #- name: Upload HTML file
-    #  uses: actions/upload-artifact@v3
-    #  with:
-    #    name: html-files
-    #    path: example_1.html
+        # Ensure the directory for HTML files is clean
+        mkdir -p output
+        tweego -o output/example_1.html FreeUse.twee
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./  # The directory to publish; adjust if needed
+        publish_dir: ./output  # The directory to publish
         publish_branch: gh-pages
         user_name: 'github-actions'
         user_email: 'github-actions@github.com'
+        # Optional: Clean the gh-pages branch before publishing
+        # clean: true
