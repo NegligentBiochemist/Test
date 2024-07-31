@@ -1,0 +1,51 @@
+:: StoryData
+{
+    "start": "Intro",
+    "StoryTitle": "FreeUse",
+    "format": "SugarCube",
+    "format-version": "2.30.0"
+}
+
+:: StoryTitle
+FreeUse
+
+:: Start
+<<textbox "$name" "Paul">>
+
+This was it. Today's the day. The day you only ever dreamt about. It would never be a reality.
+
+But it was. And it was here.
+
+The FreeUse act had passed. You shoot up out of bed, your bare dick already hard and jumping along with you, and wrench the curtains open, revealing the streets to you. You curse upon remembering that you live in possibly the most sleepiest neighborhood in the world - two old men attempting, and failing, to finger an equally as ancient woman as she mows her front lawn.
+
+If you want to watch, and even participate in, the giant orgies you know are happening, you'll need to go to the high street.
+
+Although, there is one benefit to living in such a quiet place - your sister lives just upstairs, and you know she's not been touched by the new laws yet. Maybe it's time to change that...
+
+[[Go fuck your sister|sister]]
+[[Skip her and go eat breakfast|breakfast]]
+
+:: sister
+<<set "$wake" to true>>
+You run up the stairs, not even bothering to hide your eagerness. When you throw open the door to her room though, it seems you didn't need to - she's still sound asleep. She didn't normally sleep naked, but there she was, on top of the sheets, in all her glory. Surely, this means she wants you to take her?
+
+[[Use her like the toy she is|sister-use]]
+[[Wait for her to wake up|sister-wait]]
+[[This suddenly got weird, go eat breakfast|breakfast]]
+
+:: breakfast
+You pour yourself a healthy serving of cereal, settling down at the table with a spoon as you flick through TV channels. It was almost alien, watching news anchors getting dicked down on their tables, heads pushed hard into the wood; the weather girl trying to speak around the thick cock in her mouth, spittle coating her glazed tits; the talk show hosts having to lean to the side to speak around the intern sat on their cocks.
+
+Except Dave. Dave was still showing repeats.
+
+As you watch, still naked, your cock throbbing as you shovel cereal into your mouth, your sister comes down the stairs, similarly lacking in clothes<<if $body is true>> and covered in your cum<</if>>.<<if "$wake" is true>> She must have just woken up.<</if>> She pours herself a bowl of cereal, sitting next to you on the couch. The two of you watch what is basically porn in silence.
+
+As you finish your cereal, you make to get up, only to be distracted by a hand laying on your cock. You turn to face her. "You want a blowjob?"
+
+[[Don't ask, just get on your knees and suck|sister-suck]]
+[[No, places to be, girls to fuck]]
+
+:: sister-suck
+She smiles, dropping
+
+---
