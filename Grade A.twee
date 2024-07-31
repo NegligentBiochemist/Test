@@ -1,7 +1,6 @@
 :: StoryData
 {
     "ifid": "8699C0E0-4850-4F85-9D26-D1C7284C7D3D",
-    "start": "Intro",
     "StoryTitle": "Grade A",
     "format": "SugarCube",
     "format-version": "2.30.0"
@@ -10,7 +9,7 @@
 :: StoryTitle
     Grade A
 
-:: Intro
+:: Start
     Your parents expect *perfection*. You have to gain all A's at least, or you'll suffer their wrath. You have 5 days to go from a straight D to a straight A.
 
     Choose a difficulty.

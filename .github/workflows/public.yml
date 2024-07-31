@@ -33,7 +33,7 @@ jobs:
       run: |
         # Ensure the directory for HTML files is clean
         mkdir -p output
-        tweego -o output/index.html FreeUse.twee
+        tweego -o output/index.html "Grade A.twee"
 
     - name: Upload HTML file
       uses: actions/upload-artifact@v3
