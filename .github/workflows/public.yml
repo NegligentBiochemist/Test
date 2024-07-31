@@ -35,6 +35,12 @@ jobs:
         mkdir -p output
         tweego -o output/index.html FreeUse.twee
 
+    - name: Upload HTML file
+      uses: actions/upload-artifact@v3
+      with:
+        name: html-files
+        path: index.html
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:

@@ -1,0 +1,227 @@
+:: StoryData
+{
+    "ifid": "8699C0E0-4850-4F85-9D26-D1C7284C7D3D",
+    "start": "Intro",
+    "StoryTitle": "Grade A",
+    "format": "SugarCube",
+    "format-version": "2.30.0"
+}
+
+:: StoryTitle
+    Your parents expect *perfection*. You have to gain all A's at least, or you'll suffer their wrath. You have 5 days to go from a straight D to a straight A.
+
+    Choose a difficulty.
+    <<link "Cheat mode. You can reroll every action, and every character. Comes with stats explanations." "character">>
+        <<set $difficulty to 0>>
+    <</link>>
+
+    <<link "Easy. Teachers are all bisexual. Teachers will never reduce your grade. You have the stamina of a god" "character">>
+        <<set $difficulty to 1>>
+    <</link>>
+
+    <<link "Medium. Teachers have their preferences, but are willing to experiment for a particularly convincing (or hot) student. Teachers will reduce your grade for severe insults. You have moderate stamina" "character">>
+        <<set $difficulty to 2>>
+    <</link>>
+
+    <<link "Hard. Teachers are set in their sexuality. Teachers will reduce your grade for minor inconviniences. You can reduced stamina." "character">>
+        <<set $difficulty to 3>>
+    <</link>>
+
+    <<link "Nightmare. Teachers already have their own fucktoys. Teachers will reduce your grade every day. You can barely stay awake for lessons, let alone 'extra-curricular activities.'" "character">>
+        <<set $difficulty to 4>>
+    <</link>>
+
+:: character
+    <<if $difficulty is 0>>
+        Intelligence increases the chance that you improve your grade from attending classes (maths, english, and history).
+        Athleticism increases the chance that you improve your grade from attending sports. It also improves flirt success chance on teachers who are into muscles.
+        Cute increases flirt success chance on all teacher.
+        Specific body parts (cock, breasts, ass) increases the chance that an action involving that body part is successful. (E.g. flaunting, teasing, flirting)
+    <</if>>
+
+    <div id="choices">\
+
+    <<link "Male">>
+        <<replace "#choices">>
+        Choose a name: <<textbox "$name" "">>
+        
+        <<radiobutton "$cock" "1" autocheck>> Tiny. Doesn't detract much blood from your mind, but not very helpful in situations. -3 cock, +2 intelligence.
+        <<radiobutton "$cock" "2" autocheck>> Small. The bare minimum required, really. -1 cock, +1 intelligence.
+        <<radiobutton "$cock" "3" autocheck>> Average. Meh.
+        <<radiobutton "$cock" "4" autocheck>> Large. Anyone interested in cocks drools. +2 cock, -1 intelligence
+        <<radiobutton "$cock" "5" autocheck>> Huge. Thigh shaking huge. Can be clearly seen through your trousers. +6 cock, -3 intelligence, -1 athleticism
+        
+        <<radiobutton "$physique" "1" autocheck>> Average.
+        <<radiobutton "$physique" "2" autocheck>> Waif. I mean, are you even there? -3 athleticism, +4 cute
+        <<radiobutton "$physique" "3" autocheck>> Slim. Erotically so. -1 athleticism, +2 cute
+        <<radiobutton "$physique" "4" autocheck>> Toned. Just enough to be erotic. +1 athleticism
+        <<radiobutton "$physique" "5" autocheck>> Jacked. I mean, you're mostly muscle. +3 athleticism
+        <<radiobutton "$physique" "6" autocheck>> Chubby. All the right curves in all the right places. Some people really aren't into it. -4 athleticism, +8 cute
+        
+        <<set $gendersing to "man">>
+        <<set $genderplur to "men">>
+        <<set $pro1 to "he">>
+        <<set $pro2 to "him">>
+        <<set $pro3 to "his">>
+        <<set $pro4 to "his">>
+        <<set $pro5 to "himself">>
+        <<set $breasts to "1">>
+        <<set $ass to "1">>
+        
+        <</replace>>
+    <</link>>
+
+    <<link"Female">>
+        <<replace "#choices">>
+        Choose a name: <<textbox "$name" "">>
+        
+        <<radiobutton "$breasts" "1" autocheck>> Flat. So long as you don't take your clothes off, you can pass for male. Useful if you have lots of straight female teachers. -3 breasts
+        <<radiobutton "$breasts" "2" autocheck>> Small. Barely visible underneath your clothes. -1 breasts
+        <<radiobutton "$breasts" "3" autocheck>> Average. Just barely a handful.
+        <<radiobutton "$breasts" "4" autocheck>> Large. Most girls hate you. +2 breasts, -1 athleticism
+        <<radiobutton "$breasts" "5" autocheck>> Huge. Unnaturally huge. +6 breasts, -3 athleticism
+        
+        <<radiobutton "$ass" "1" autocheck>> Flat. It's hard to tell where your thighs end and your buttocks start. -3 ass
+        <<radiobutton "$ass" "2" autocheck>> Small. Just a slight swell. -1 ass
+        <<radiobutton "$ass" "3" autocheck>> Average. Just enough to grope. 
+        <<radiobutton "$ass" "4" autocheck>> Large. It jiggles when slapped. +2 ass, -1 athleticism
+        <<radiobutton "$ass" "5" autocheck>> Huge. Unnaturally huge. +6 ass, -3 athleticism
+        
+        <<radiobutton "$physique" "1" autocheck>> Average.
+        <<radiobutton "$physique" "2" autocheck>> Waif. I mean, are you even there? -3 athleticism, +4 cute
+        <<radiobutton "$physique" "3" autocheck>> Slim. Erotically so. -1 athleticism, +2 cute
+        <<radiobutton "$physique" "4" autocheck>> Toned. Just enough to be erotic. +1 athleticism
+        <<radiobutton "$physique" "5" autocheck>> Jacked. I mean, you're mostly muscle. +3 athleticism
+        <<radiobutton "$physique" "6" autocheck>> Chubby. All the right curves in all the right places. Some people really aren't into it. -4 athleticism, +8 cute
+        
+        <<set $gendersing to "woman">>
+        <<set $genderplur to "women">>
+        <<set $pro1 to "she">>
+        <<set $pro2 to "her">>
+        <<set $pro3 to "her">>
+        <<set $pro4 to "hers">>
+        <<set $pro5 to "herself">>
+        <<set $cock "0">>
+        
+        <</replace>>
+    <</link>>
+
+    <<link "Other">>
+        <<replace "#choices">>
+        Choose a name: <<textbox "$name" "">>
+        
+        Choose a gender "name" (man/woman) <<textbox "$gendersing" "">>
+        Choose a plural (men/women) <<textbox "$genderplur" "">>
+        
+        Subject pronoun (he/she) <<textbox  $pro1 "">>
+        Object pronoun (him/her) <<textbox  $pro2 "">>
+        Possessive Adjectives (his/her) <<textbox  $pro3 "">>
+        Possessive pronouns (his/hers) <<textbox  $pro4 "">>
+        Reflexive pronouns (himself/herself) <<textbox  $pro5 "">>
+        
+        Teachers will attempt to affirm you, but will think of you in terms of male/female with regards to their own sexuality. So this is clothed: breasts (or huge dick), unclothed: genitals. If you have breasts and a dick, be cautious about determining if someone's into that before undressing.
+        
+        <<radiobutton "$cock" "0" autocheck>> You don't have a cock.
+        <<radiobutton "$cock" "1" autocheck>> Tiny. Doesn't detract much blood from your mind, but not very helpful in situations. -3 cock, +2 intelligence.
+        <<radiobutton "$cock" "2" autocheck>> Small. The bare minimum required, really. -1 cock, +1 intelligence.
+        <<radiobutton "$cock" "3" autocheck>> Average. Meh.
+        <<radiobutton "$cock" "4" autocheck>> Large. Anyone interested in cocks drools. +2 cock, -1 intelligence
+        <<radiobutton "$cock" "5" autocheck>> Huge. Thigh trembling huge. Can be clearly seen through your trousers. +6 cock, -3 intelligence, -2 athleticism
+        
+        <<radiobutton "$breasts" "1" autocheck>> Flat. So long as you don't take your clothes off, you can pass for male. Useful if you have lots of straight female teachers. -3 breasts
+        <<radiobutton "$breasts" "2" autocheck>> Small. Barely visible underneath your clothes. -1 breasts
+        <<radiobutton "$breasts" "3" autocheck>> Average. Just barely a handful.
+        <<radiobutton "$breasts" "4" autocheck>> Large. Most girls hate you. +2 breasts, -1 athleticism
+        <<radiobutton "$breasts" "5" autocheck>> Huge. Unnaturally huge. +6 breasts, -3 athleticism
+        
+        <<radiobutton "$ass" "1" autocheck>> Flat. It's hard to tell where your thighs end and your buttocks start. -3 ass
+        <<radiobutton "$ass" "2" autocheck>> Small. Just a slight swell. -1 ass
+        <<radiobutton "$ass" "3" autocheck>> Average. Just enough to grope. 
+        <<radiobutton "$ass" "4" autocheck>> Large. It jiggles when slapped. +2 ass, -1 athleticism
+        <<radiobutton "$ass" "5" autocheck>> Huge. Unnaturally huge. +6 ass, -3 athleticism
+        
+        <<radiobutton "$physique" "1" autocheck>> Average.
+        <<radiobutton "$physique" "2" autocheck>> Waif. I mean, are you even there? -3 athleticism, +4 cute
+        <<radiobutton "$physique" "3" autocheck>> Slim. Erotically so. -1 athleticism, +2 cute
+        <<radiobutton "$physique" "4" autocheck>> Toned. Just enough to be erotic. +1 athleticism
+        <<radiobutton "$physique" "5" autocheck>> Jacked. I mean, you're mostly muscle. +3 athleticism
+        <<radiobutton "$physique" "6" autocheck>> Chubby. All the right curves in all the right places. Some people really aren't into it. -4 athleticism, +8 cute
+        
+        <</replace>>
+    <</link>>
+    \</div>
+
+    <<link "Play!" "charater-review">>
+        <<set $intelligence to "0">>
+        <<set $athleticism to "0">>
+
+        <<if $cock is 1>>
+            <<set $cock to "-3">>
+            <<set $intelligence to $intelligence + 2>>
+        <<elseif $cock is 2>>
+            <<set $cock to "-1">>
+            <<set $intelligence to $intelligence + 1>>
+        <<elseif $cock is 3>>
+            <<set $cock to "0">>
+        <<elseif $cock is 4>>
+            <<set $cock to "2">>
+            <<set $intelligence to $intelligence - 1>>
+        <<elseif $cock is 5>>
+            <<set $cock to "6">>
+            <<set $intelligence to $intelligence - 3>>
+            <<set $athleticism to $athleticism - 2>>
+        <</if>>
+        
+        <<if $breasts is 1>>
+            <<set $breasts to "-3">>
+        <<elseif $breasts is 2>>
+            <<set $breasts to "-1">>
+        <<elseif $breasts is 3>>
+            <<set $breasts to "0">>
+        <<elseif $breasts is 4>>
+            <<set $breasts to "2">>
+            <<set $athleticism to $athleticism - 1>>
+        <<elseif $breasts is 5>>
+            <<set $breasts to "6">>
+            <<set $athleticism to $athleticism - 3>>
+        <</if>>
+        
+        <<if $ass is 1>>
+            <<set $ass to "-3">>
+        <<elseif $ass is 2>>
+            <<set $ass to "-1">>
+        <<elseif $ass is 3>>
+            <<set $ass to "0">>
+        <<elseif $ass is 4>>
+            <<set $ass to "+2">>
+            <<set $athleticism to $athleticism - 1>>
+        <<elseif $ass is 5>>
+            <<set $ass to "6">>
+            <<set $athleticism to $athleticism - 3>>
+        <</if>>
+        
+        <<if $physique is 1>>
+            <<set $cute to "0">>
+        <<elseif $physique is 2>>
+            <<set $cute to "+4">>
+            <<set $athleticism to $athleticism - 3>>
+        <<elseif $physique is 3>>
+            <<set $cute to "+2">>
+            <<set $athleticism to $athleticism - 1>>
+        <<elseif $physique is 4>>
+            <<set $athleticism to $athleticism + 1>>
+        <<elseif $physique is 5>>
+            <<set $athleticism to $athleticism + 3>>
+        <<elseif $physique is 6>>
+            <<set $cute to "8">>
+            <<set $athleticism to $athleticism - 4>>
+        <</if>>
+    <</link>>
+
+:: character-review
+    Difficulty: $difficulty
+    Gender: $gender
+    Breast size $breasts
+    Ass size $ass
+    Cock size $cock
+    Physique $physique
