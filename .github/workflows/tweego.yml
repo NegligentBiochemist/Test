@@ -22,12 +22,13 @@ jobs:
       run: |
         git clone https://github.com/tmedwards/tweego.git
         cd tweego
+        go mod tidy          # Download dependencies and update go.sum
         go install
         go build
         cp tweego /usr/local/bin/tweego  # Make sure tweego is in PATH
 
     - name: Convert Twee to HTML
       run: |
-        tweego -o example_1.html FreeUse.twee
+        tweego -o example_1.html example_1.twee
         ls -l  # List files to verify the output
         # Add any additional commands to move or handle the HTML file as needed
