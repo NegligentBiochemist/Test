@@ -67,8 +67,8 @@
         <<set $pro3 to "his">>
         <<set $pro4 to "his">>
         <<set $pro5 to "himself">>
-        <<set $breasts to "1">>
-        <<set $ass to "1">>
+        <<set $breasts to "0">>
+        <<set $ass to "0">>
         
         <</replace>>
     <</link>>
@@ -103,7 +103,7 @@
         <<set $pro3 to "her">>
         <<set $pro4 to "hers">>
         <<set $pro5 to "herself">>
-        <<set $cock "0">>
+        <<set $cock to "0">>
         
         <</replace>>
     <</link>>
@@ -115,11 +115,11 @@
         Choose a gender "name" (man/woman) <<textbox "$gendersing" "">>
         Choose a plural (men/women) <<textbox "$genderplur" "">>
         
-        Subject pronoun (he/she) <<textbox  $pro1 "">>
-        Object pronoun (him/her) <<textbox  $pro2 "">>
-        Possessive Adjectives (his/her) <<textbox  $pro3 "">>
-        Possessive pronouns (his/hers) <<textbox  $pro4 "">>
-        Reflexive pronouns (himself/herself) <<textbox  $pro5 "">>
+        Subject pronoun (he/she) <<textbox  "$pro1" "">>
+        Object pronoun (him/her) <<textbox  "$pro2" "">>
+        Possessive Adjectives (his/her) <<textbox  "$pro3" "">>
+        Possessive pronouns (his/hers) <<textbox  "$pro4" "">>
+        Reflexive pronouns (himself/herself) <<textbox  "$pro5" "">>
         
         Teachers will attempt to affirm you, but will think of you in terms of male/female with regards to their own sexuality. So this is clothed: breasts (or huge dick), unclothed: genitals. If you have breasts and a dick, be cautious about determining if someone's into that before undressing.
         
@@ -153,7 +153,7 @@
     <</link>>
     \</div>
 
-    <<link "Play!" "charater-review">>
+    <<link "Play!" "character-review">>
         <<set $intelligence to "0">>
         <<set $athleticism to "0">>
 
